@@ -1,0 +1,6 @@
+<div class="door-open">
+  <img src="assets/images/day1.jpg" alt="Door 1 Image" class="door-image">
+  <div class="door-closed" (click)="openDoor(door)" [class.opened]="door.isOpen">
+     <span class="door-number">{{door.day}}</span>
+  </div>
+</div>
