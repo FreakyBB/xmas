@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { AdventDoor } from '../calendar';
+import { AdventDoor } from '../data/calendar';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,12 +14,19 @@ import { AdventDoor } from '../calendar';
 })
 export class AdventCalendarDoorComponent {
 
+  constructor(
+    private router: Router
+  ) {}
+
   currentDay = new Date().getDate(); // aktuelles Tagesdatum
   @Input({ required: true }) door!: AdventDoor;
 
   openDoor(door: AdventDoor) {
     if (this.currentDay >= door.day) {
       door.isOpen = !door.isOpen; // Set door as open
+        setTimeout(() => {
+        this.router.navigate(['/door', door.uuid]); // Weiterleitung zur Detailseite
+      }, 1000); // Nach der Animation (1 Sekunde Verzögerung)
     } else {
       alert('You can’t open this door yet!');
     }

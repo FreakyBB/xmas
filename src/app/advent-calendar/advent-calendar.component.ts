@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { AdventCalendarDoorComponent } from './advent-calendar-door/advent-calendar-door.component';
-import { AdventDoor, adventDoors } from './calendar';
+import { AdventCalendarDoorComponent } from '../advent-calendar-door/advent-calendar-door.component';
+import { AdventDoor, adventDoors } from '../data/calendar';
 
 
 
