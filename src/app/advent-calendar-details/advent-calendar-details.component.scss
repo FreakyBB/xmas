@@ -1,3 +1,55 @@
 :host {
-  display: block;
+    display: block;
+
+    .door-detail {
+        height: 100vh;
+        padding: 1rem;
+
+        &-back-link {
+            background-color: rgba(255 255 255 / 30%);
+            padding: 10px;
+            border-radius: 10px;
+            a {
+                color: black;
+            }
+        }
+        &-main {
+            background-color: rgba(255 255 255 / 30%);
+            padding: 10px;
+            margin-block: 2rem;
+            border-radius: 10px;
+            &-header {
+                h1 {
+                    font-family: 'Pacifico', cursive;
+                    color: white;
+                    margin-block-start: 1rem;
+                    margin-block-end: 2rem;
+                }
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+            }
+
+            &-body {
+                h2 {
+                    margin-block-start: 1rem;
+                    margin-block-end: 0.5rem;
+                    font-family: 'Pacifico', cursive;
+                    color: white;
+                }
+
+                &-author {
+                    color: red;
+                }
+
+                &-story {
+                    color: white;
+                }
+            }
+        }
+    }
 }

@@ -1,5 +1,31 @@
+@mixin vh-grid-stretch-evenly($max-cols, $min-col-width, $row-gap, $col-gap) {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            min(
+                max(
+                    #{$min-col-width},
+                    calc(100% / #{$max-cols} - #{$col-gap} * (#{$max-cols} - 1))
+                ),
+                100%
+            ),
+            1fr
+        )
+    );
+    grid-gap: $row-gap $col-gap;
+    grid-auto-rows: 1fr;
+}
+
 .calendar {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
+    margin-inline: 4rem 2rem;
+    margin-block: 1rem;
+    @include vh-grid-stretch-evenly(
+        6,
+        200px,
+        1rem,
+        2rem
+    ); // Werte: max-cols, min-col-width, row-gap, column-gap
+}
+.door {
 }

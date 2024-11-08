@@ -1,1 +1,20 @@
-<h1>Hello World</h1>
+<div class="door-detail">
+    <div class="door-detail-back-link">
+        <a [routerLink]="['/calendar']">Zurück</a>
+    </div>
+    <div class="door-detail-main">
+        <div class="door-detail-main-header">
+            <h1>{{ door.alcohol }}</h1>
+            <img src="assets/images/day1.jpg" />
+        </div>
+
+        <div class="door-detail-main-body">
+            <h2>{{ door.heading }}</h2>
+            <span class="door-detail-main-body-author"
+                >von {{ door.person }}</span
+            >
+
+            <p class="door-detail-main-body-story">{{ door.story }}</p>
+        </div>
+    </div>
+</div>

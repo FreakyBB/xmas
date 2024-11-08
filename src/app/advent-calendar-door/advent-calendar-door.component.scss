@@ -1,47 +1,46 @@
 .door-open {
-  background-color: #333;
-  position: relative;
-  width: 200px;
-  height: 300px;
-
-  margin: 0 auto;
-  margin-top: 50px;
-
-  .door-image {
+    background-color: #333;
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
+    height: 300px;
 
+    margin: 0 auto;
+
+    .door-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
 }
 
 .door-closed {
-  background-color: #f8c471;
-  /* warmes Gold oder Rot als festliche Farbe */
-  border: 2px solid #d35400;
-  /* Kontrastfarbiger Rahmen */
-  border-radius: 5px;
-  /* Leichte Abrundung für ein weicheres Design */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-size: 3rem;
-  font-family: 'Pacifico', cursive;
-  cursor: pointer;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 300px;
+    background-color: #f8c471;
+    /* warmes Gold oder Rot als festliche Farbe */
+    border: 2px solid #d35400;
+    /* Kontrastfarbiger Rahmen */
+    border-radius: 5px;
+    /* Leichte Abrundung für ein weicheres Design */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 300px;
 
-  transform-origin: left;
-  /*Speed of the Door animation*/
-  transition: all 0.5s ease-in-out;
+    transform-origin: left;
+    /*Speed of the Door animation*/
+    transition: all 0.5s ease-in-out;
 }
 
 .opened {
-  /*prespectiv creates the door open effect*/
-  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+    /*prespectiv creates the door open effect*/
+    transform: perspective(1200px) translateZ(0px) translateX(0px)
+        translateY(0px) rotateY(-105deg);
 }
